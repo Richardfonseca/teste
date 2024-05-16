@@ -1,0 +1,103 @@
+/* Define o estilo básico da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Contêiner principal da cena */
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo da estrada */
+.road {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
+
+/* Estilo da faixa de pedestres */
+.crosswalk {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 60px;
+    background: repeating-linear-gradient(
+        90deg,
+        white,
+        white 10px,
+        #333 10px,
+        #333 20px
+    );
+}
+
+/* Estilo básico dos semáforos */
+.traffic-light {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 150px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Posição do semáforo para veículos */
+#vehicle-light {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Posição do semáforo para pedestres */
+.pedestrian {
+    top: 60%;
+    left: 70%;
+}
+
+/* Estilo das luzes dos semáforos */
+.light {
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* Cores ativas das luzes dos semáforos */
+.light.red.active {
+    background-color: red;
+}
+
+.light.yellow.active {
+    background-color: yellow;
+}
+
+.light.green.active {
+    background-color: green;
+}
+
+/* Estilo do botão */
+button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<div class="scene">
+		<!-- Representa a estrada onde os carros trafegam -->
+		<div class="road">
+			<!-- Faixa de pedestres -->
+			<div class="crosswalk"></div>
+		</div>
+		<!-- Semáforo para veículos -->
+		<div class="traffic-light" id="vehicle-light">
+			<div class="light red"></div>
+			<div class="light yellow"></div>
+			<div class="light green"></div>
+		</div>
+		<!-- Semáforo para pedestres -->
+		<div class="traffic-light pedestrian" id="pedestrian-light">
+			<div class="light red"></div>
+			<div class="light green"></div>
+		</div>
+		<!-- Botão que o pedestre aperta para atravessar a rua -->
+		<button id="pedestrian-button">Pedir para atravessar</button>
+	</div>
+
+	<!-- Script que controla a lógica dos semáforos -->
+	<script src="teste.js"></script>
+    <link rel="stylesheet" href="teste.css">
+
+</body>
+</html>
