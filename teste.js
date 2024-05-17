@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const vehicleLight = document.getElementById('vehicle-light');
     const pedestrianLight = document.getElementById('pedestrian-light');
     const pedestrianButton = document.getElementById('pedestrian-button');
+    const pedestrianButton2 = document.getElementById('pedestrian-button2');
 
     // Função para definir a cor ativa de um semáforo
     function setLight(lightElement, color) {
@@ -30,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 setLight(vehicleLight, 'green');
                 setLight(pedestrianLight, 'red');
-            }, 30000); // Duração do semáforo verde para pedestres
-        }, 3000); // Duração do semáforo amarelo para veículos
+            }, 100); // Duração do semáforo verde para pedestres
+        }, 2000); // Duração do semáforo amarelo para veículos
     }
 
     // Evento de clique no botão do pedestre
@@ -41,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
             changeLights();
         }
     });
+    pedestrianButton2.addEventListener('click', () => {
+        // Inicia a mudança de luzes apenas se o semáforo do veículo não estiver vermelho
+        if (!vehicleLight.querySelector('.red').classList.contains('active')) {
+            changeLights();
+        }
+    });
+
 
     // Inicializa as luzes dos semáforos
     setLight(vehicleLight, 'green');
